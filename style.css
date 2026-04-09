@@ -1,0 +1,260 @@
+Đây là toàn bộ mã nguồn "sạch" 100%, không chứa bất kỳ lời giải thích nào bên trong tệp tin để tránh lỗi hiển thị chữ lên màn hình như bạn đã gặp.
+
+Bạn hãy thực hiện: Mở từng file -> Xóa hết sạch nội dung cũ -> Dán đúng đoạn mã tương ứng bên dưới.
+
+1. File: style.css
+
+(Xóa hết file style.css và dán đoạn này vào)
+
+code
+CSS
+download
+content_copy
+expand_less
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    background: #ffff00;
+    color: black;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    border: 3px solid black;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #e74c3c;
+    border-radius: 5px;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+img {
+    border: 5px solid #34495e;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    max-width: 100%;
+    height: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid img:nth-child(even) {
+    border-radius: 50px 0px 50px 0px;
+    border-color: #e67e22;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flex img {
+    width: 300px;
+}
+
+header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: #1a2a3a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffff00;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+2. File: index.html
+code
+Html
+play_circle
+download
+content_copy
+expand_less
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Springtime In Michigan - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
+        <li><a href="parks.html">Walks in the Park</a></li>
+      </ul>
+    </nav>
+    <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
+    <h1>Springtime in Michigan</h1>
+  </header>
+
+  <main id="main-content">
+    <p>Springtime in <a href="https://www.michigan.org/city/ann-arbor">Ann Arbor</a> is a beautiful time. Even though it can be chilly at times, it is nice to walk my dog Bacon. This site includes some pictures I have taken on these walks.</p>
+
+    <p>Sometimes we walk around the neighborhood, other times we make it to the woods. Ann Arbor also has some beautiful lakes and rivers including the <a href="https://www.annarbor.org/things-to-do/recreation-outdoors/huron-river/">Huron River Watertrail</a> and the <a href="https://www.a2gov.org/departments/Parks-Recreation/parks-places/argo/pages/default.aspx">Argo Park Cascades</a>.</p>
+  </main>
+
+  <footer>
+    <p>This page was originally created by Colleen van Lent for the <a href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization. Students are invited to make changes.</p>
+  </footer>
+</body>
+</html>
+3. File: neighborhood.html
+code
+Html
+play_circle
+download
+content_copy
+expand_less
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Neighborhood Walk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
+        <li><a href="parks.html">Walks in the Park</a></li>
+      </ul>
+    </nav>
+    <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
+    <h1>Neighborhood Walks</h1>
+  </header>
+
+  <main id="main-content">
+    <div class="grid">
+      <img src="images/bend_in_the_road.png" alt="a purple tree stands in contrast to the green leaved trees along a bend in the road">
+      <img src="images/pink_blossoms.png" alt="small pink blossoms on an otherwise green leaved tree">
+      <img src="images/blooming_trees.png" alt="brown labradoodle sitting in front of white and purple blooming trees">
+      <img src="images/falling_petals.png" alt="a purple tulip tree that is beginning to shed its petals">
+      <img src="images/hanging_plants.png" alt="red and green plants in a decorative hanging basket">
+      <img src="images/potted_plants.png" alt="a decorative planter with a variety of brightly colored plants">
+      <img src="images/red_maple.png" alt="a small Japanese maple tree in front of a purple door">
+      <img src="images/tree_with_white_blooms.png" alt="brown labradoodle sitting in front of tree blooming with white petals">
+      <img src="images/tulips.png" alt="bright red tulips in front of a garden light">
+      <img src="images/white_buds_on_tree.png" alt="artsy shot of white blooms on a green tree with a dark background">
+    </div>
+  </main>
+
+  <footer>
+    <p>This page was originally created by Colleen van Lent for the <a href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization. Students are invited to make changes.</p>
+  </footer>
+</body>
+</html>
+4. File: parks.html
+code
+Html
+play_circle
+download
+content_copy
+expand_less
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Michigan Parks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+  
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
+        <li><a href="parks.html">Walks in the Park</a></li>
+      </ul>
+    </nav>
+    <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
+    <h1>Michigan Parks</h1>
+  </header>
+
+  <main id="main-content">
+    <h2>Walks in the Park</h2>
+    <div class="flex">
+      <img src="images/BaconGallupPark.jpg" alt="Dog at Gallup Park">
+      <img src="images/BaconArgoPark.jpg" alt="Dog at Argo Park">
+      <img src="images/BaconNicholsArboretum.jpg" alt="Dog at Nichols Arboretum">
+      <img src="images/bacon_in_the_woods.png" alt="brown labradoodle sitting near a stream in a wooded setting">
+      <img src="images/bacon_near_the_fort.png" alt="brown labradoodle posing in front of a makeshift fort made of branches">
+      <img src="images/downed_tree.png" alt="a downed tree crossing a stream">
+      <img src="images/fort_in_woods.png" alt="a small fort made of branches">
+      <img src="images/huron_river_cascades.JPG" alt="two people on a kayak approaching some small rapids">
+      <img src="images/lake_view.JPG" alt="a child running along a lake obscured by branches">
+      <img src="images/mist_over_huron_river.JPG" alt="the mist rising over a river in the morning">
+      <img src="images/munising.jpg" alt="small waterfall at Munising">
+      <img src="images/reflected_tree.JPG" alt="reflection of a lake and trees">
+    </div>
+  </main>
+
+  <footer>
+    <p>This page was originally created by Colleen van Lent for the <a href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization. Students are invited to make changes.</p>
+  </footer>
+</body>
+</html>
